@@ -4,6 +4,11 @@
       "source": "/",
       "has": [{ "type": "host", "value": "burundi.topaiafrica.com" }],
       "destination": "/burundi.html"
+    },
+    {
+      "source": "/index.html",
+      "has": [{ "type": "host", "value": "burundi.topaiafrica.com" }],
+      "destination": "/burundi.html"
     }
   ]
 }
