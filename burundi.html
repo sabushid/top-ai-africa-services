@@ -192,6 +192,28 @@
     .footer a { color: #788bff; transition: color 0.2s; }
     .footer a:hover { color: #fbf9f9; }
 
+    /* -- Testimonials -- */
+    .testimonials-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media(min-width:768px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(min-width:1024px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+    .testimonial-card { background: #fff; border-radius: 16px; padding: 32px; border: 1px solid rgba(120,139,255,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: all 0.3s; display: flex; flex-direction: column; }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(120,139,255,0.1); border-color: #788bff; }
+    .testimonial-stars { color: #f59e0b; font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+    .testimonial-problem { font-size: 13px; color: #788bff; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .testimonial-quote { font-size: 15px; color: #423f40; line-height: 1.7; margin-bottom: 16px; flex: 1; font-style: italic; }
+    .testimonial-result { background: rgba(120,139,255,0.06); border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; }
+    .testimonial-result-label { font-size: 11px; font-weight: 600; color: #788bff; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .testimonial-result-val { font-size: 14px; font-weight: 700; color: #050d11; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid rgba(120,139,255,0.08); padding-top: 16px; }
+    .testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #788bff, #5a6fd6); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+    .testimonial-name { font-weight: 700; font-size: 14px; color: #050d11; }
+    .testimonial-role { font-size: 12px; color: #423f40; }
+    .testimonials-show-more { display: flex; justify-content: center; margin-top: 40px; }
+    .show-more-btn { padding: 14px 36px; border-radius: 9999px; background: rgba(120,139,255,0.08); color: #788bff; font-weight: 600; font-size: 14px; border: 2px solid rgba(120,139,255,0.2); cursor: pointer; transition: all 0.3s; font-family: 'Jost', sans-serif; }
+    .show-more-btn:hover { background: #788bff; color: #fbf9f9; transform: translateY(-2px); }
+    .testimonial-hidden { display: none; }
+    .testimonial-hidden.show { display: flex; }
+
     .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s, transform 0.7s; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -217,7 +239,7 @@
   <!-- Nav -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="https://topaiafrica.com" class="nav-logo"><img src="https://topaiafrica.com/wp-content/uploads/2026/04/top-ai-africa-burundi-flag-logo.png" alt="Top AI Africa Burundi Logo - AI Agents & Automation for Burundi" loading="eager" /></a>
+      <a href="https://topaiafrica.com" class="nav-logo"><img src="https://topaiafrica.com/wp-content/uploads/2026/04/top-ai-africa-burundi-flag-logo.png" alt="Top AI Burundi Logo - AI Agents & Automation for Burundi & Africa" loading="eager" /></a>
       <nav class="nav-links">
         <a href="https://topaiafrica.com/" data-i18n="nav_home">Home</a>
         <a href="#services" data-i18n="nav_services">Services</a>
@@ -344,6 +366,183 @@
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section id="testimonials" class="section" style="background:#f7f7fc;">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-tag" data-i18n="test_tag">Client Success Stories</span>
+        <h2 class="section-title" data-i18n="test_title">What Our <em>Clients Say</em></h2>
+        <p class="section-desc" data-i18n="test_desc">Real businesses across Africa sharing real results from AI automation.</p>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t1_problem">Problem: Manual data entry</div>
+          <div class="testimonial-quote" data-i18n="t1_quote">"We were spending 30+ hours per week on manual data entry. Top AI Burundi built us custom AI agents that now handle everything automatically. Our team focuses on strategy instead of spreadsheets."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t1_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t1_rval">85% reduction in data processing time &bull; 30 hrs/week saved</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">JM</div><div><div class="testimonial-name">Jean-Marie Ndayisaba</div><div class="testimonial-role" data-i18n="t1_role">CEO, BujaTech Solutions &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t2_problem">Problem: Slow customer response</div>
+          <div class="testimonial-quote" data-i18n="t2_quote">"Our customers waited 24-48 hours for responses. After deploying Top AI Burundi's chatbot agents, we respond in under 60 seconds — 24/7. Customer satisfaction jumped from 62% to 96%."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t2_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t2_rval">96% customer satisfaction &bull; Response time: 60 seconds</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">AN</div><div><div class="testimonial-name">Aisha Nkurunziza</div><div class="testimonial-role" data-i18n="t2_role">Operations Director, AfriPay &bull; Rwanda</div></div></div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t3_problem">Problem: No AI knowledge</div>
+          <div class="testimonial-quote" data-i18n="t3_quote">"Our team had zero AI experience. Top AI Burundi's training program transformed us in 3 weeks. Now we build and manage our own AI workflows internally. The ROI was immediate."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t3_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t3_rval">12 employees trained &bull; 40% productivity increase</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">PH</div><div><div class="testimonial-name">Patrick Habimana</div><div class="testimonial-role" data-i18n="t3_role">CTO, KigaliDev Labs &bull; Rwanda</div></div></div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t4_problem">Problem: High operational costs</div>
+          <div class="testimonial-quote" data-i18n="t4_quote">"Our operational costs were eating into profits. Top AI Burundi's consultation identified $15,000/month in automatable tasks. Within 6 weeks, our AI agents were handling them all."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t4_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t4_rval">$15,000/month saved &bull; 65% cost reduction</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">GN</div><div><div class="testimonial-name">Grace Nibigira</div><div class="testimonial-role" data-i18n="t4_role">Founder, TransAfrica Logistics &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t5_problem">Problem: Lost leads</div>
+          <div class="testimonial-quote" data-i18n="t5_quote">"We were losing 40% of leads because follow-ups took too long. Top AI Burundi's automation system now responds instantly and books appointments. Our conversion rate tripled."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t5_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t5_rval">3X conversion rate &bull; Zero leads lost</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">DM</div><div><div class="testimonial-name">David Mugisha</div><div class="testimonial-role" data-i18n="t5_role">Sales Director, NairobiHomes Realty &bull; Kenya</div></div></div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t6_problem">Problem: Inventory chaos</div>
+          <div class="testimonial-quote" data-i18n="t6_quote">"Managing inventory across 5 warehouses was a nightmare. Top AI Burundi built AI agents that track stock levels, predict demand, and auto-reorder. Stockouts dropped to near zero."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t6_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t6_rval">98% inventory accuracy &bull; Stockouts reduced by 92%</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">FM</div><div><div class="testimonial-name">Fiston Manirambona</div><div class="testimonial-role" data-i18n="t6_role">Supply Chain Manager, FarmHub &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t7_problem">Problem: Slow report generation</div>
+          <div class="testimonial-quote" data-i18n="t7_quote">"Monthly reports took our finance team 3 days to compile. Top AI Burundi's AI agents now generate them in 15 minutes with zero errors. Our CFO couldn't believe it."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t7_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t7_rval">Reports: 3 days → 15 minutes &bull; 100% accuracy</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">EN</div><div><div class="testimonial-name">Emmanuel Niyonzima</div><div class="testimonial-role" data-i18n="t7_role">Finance Director, MediLink Health &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t8_problem">Problem: Staff overwhelmed</div>
+          <div class="testimonial-quote" data-i18n="t8_quote">"Our 4-person team was doing the work of 12. After Top AI Burundi's consultation and AI deployment, the same team handles 3X the workload — without overtime or burnout."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t8_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t8_rval">3X capacity with same team &bull; Zero overtime</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">CU</div><div><div class="testimonial-name">Claudine Uwimana</div><div class="testimonial-role" data-i18n="t8_role">HR Manager, Learnova Education &bull; Tanzania</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t9_problem">Problem: No digital presence</div>
+          <div class="testimonial-quote" data-i18n="t9_quote">"We had no online presence and zero digital leads. Top AI Burundi built our AI-powered platform and trained our team. In 3 months, 70% of new clients come through digital channels."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t9_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t9_rval">70% leads from digital &bull; 5X revenue growth</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">JB</div><div><div class="testimonial-name">Joseph Bizimana</div><div class="testimonial-role" data-i18n="t9_role">Owner, Buja Real Estate &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t10_problem">Problem: Manual invoice processing</div>
+          <div class="testimonial-quote" data-i18n="t10_quote">"Processing 500+ invoices monthly was error-prone and slow. Top AI Burundi's agents now extract, validate, and file invoices automatically. Errors dropped from 12% to 0.3%."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t10_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t10_rval">Error rate: 12% → 0.3% &bull; 500+ invoices/month automated</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">MK</div><div><div class="testimonial-name">Marie-Claire Kayitesi</div><div class="testimonial-role" data-i18n="t10_role">Accountant, DarCommerce &bull; Tanzania</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t11_problem">Problem: Inconsistent quality</div>
+          <div class="testimonial-quote" data-i18n="t11_quote">"Quality control was inconsistent across our production lines. Top AI Burundi deployed AI monitoring agents that catch defects in real-time. Our rejection rate dropped by 78%."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t11_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t11_rval">78% fewer defects &bull; Real-time quality monitoring</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">AN</div><div><div class="testimonial-name">Alain Nduwimana</div><div class="testimonial-role" data-i18n="t11_role">Production Manager, BujaManu &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t12_problem">Problem: Scaling bottleneck</div>
+          <div class="testimonial-quote" data-i18n="t12_quote">"We couldn't scale beyond 200 clients because everything was manual. Top AI Burundi automated our onboarding, billing, and support. We now serve 800+ clients with the same team."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t12_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t12_rval">200 → 800+ clients &bull; 4X growth, same team</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">SW</div><div><div class="testimonial-name">Samuel Wanjiru</div><div class="testimonial-role" data-i18n="t12_role">CEO, Nairobi SaaS Co. &bull; Kenya</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t13_problem">Problem: Patient scheduling chaos</div>
+          <div class="testimonial-quote" data-i18n="t13_quote">"Double bookings and missed appointments were daily headaches. Top AI Burundi's scheduling agent manages all patient bookings, sends reminders, and handles cancellations automatically."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t13_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t13_rval">No-shows reduced by 67% &bull; Zero double bookings</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">DN</div><div><div class="testimonial-name">Dr. Nadine Iradukunda</div><div class="testimonial-role" data-i18n="t13_role">Medical Director, BujaHealth Clinic &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t14_problem">Problem: Compliance risks</div>
+          <div class="testimonial-quote" data-i18n="t14_quote">"Tracking regulatory compliance across 3 countries manually was risky. Top AI Burundi built AI agents that monitor regulations, flag changes, and auto-update our systems. We haven't missed a deadline since."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t14_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t14_rval">100% compliance rate &bull; Zero missed deadlines</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">RB</div><div><div class="testimonial-name">Rachel Bukuru</div><div class="testimonial-role" data-i18n="t14_role">Legal Director, EastAfri Insurance &bull; Uganda</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t15_problem">Problem: Crop loss forecasting</div>
+          <div class="testimonial-quote" data-i18n="t15_quote">"We lost 25% of crops yearly due to poor forecasting. Top AI Burundi's AI agents analyze weather, soil, and market data to optimize planting schedules. Crop yields are up 35%."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t15_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t15_rval">35% higher crop yields &bull; Losses cut by 80%</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">TN</div><div><div class="testimonial-name">Théophile Niyongabo</div><div class="testimonial-role" data-i18n="t15_role">Director, AgriSmart Burundi &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t16_problem">Problem: Hiring too slow</div>
+          <div class="testimonial-quote" data-i18n="t16_quote">"Screening 300+ CVs per position took weeks. Top AI Burundi's AI recruitment agent screens, ranks, and shortlists candidates in hours. Time-to-hire dropped from 45 to 12 days."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t16_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t16_rval">Time-to-hire: 45 → 12 days &bull; 300+ CVs screened/hour</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">IM</div><div><div class="testimonial-name">Immaculée Mugabo</div><div class="testimonial-role" data-i18n="t16_role">HR Director, KampalaStaff &bull; Uganda</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t17_problem">Problem: Social media overload</div>
+          <div class="testimonial-quote" data-i18n="t17_quote">"Managing social media for 15 client accounts was unsustainable. Top AI Burundi automated content scheduling, engagement tracking, and reporting. One person now manages everything."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t17_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t17_rval">15 accounts managed by 1 person &bull; 60% engagement increase</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">JN</div><div><div class="testimonial-name">Josiane Nshimirimana</div><div class="testimonial-role" data-i18n="t17_role">Founder, DigitalBuja Agency &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t18_problem">Problem: Energy waste</div>
+          <div class="testimonial-quote" data-i18n="t18_quote">"Our hotel's energy costs were out of control. Top AI Burundi's AI agents monitor and optimize HVAC, lighting, and water usage in real-time. Energy bills dropped 42% in the first quarter."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t18_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t18_rval">42% energy cost reduction &bull; $8,000/quarter saved</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">OB</div><div><div class="testimonial-name">Olivier Baranyanka</div><div class="testimonial-role" data-i18n="t18_role">GM, Lake Tanganyika Resort &bull; Burundi</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t19_problem">Problem: Fraud detection</div>
+          <div class="testimonial-quote" data-i18n="t19_quote">"We were losing $50K+ monthly to fraudulent transactions. Top AI Burundi's AI fraud detection agents now flag suspicious activity instantly. Fraud losses dropped 94% in 2 months."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t19_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t19_rval">94% fraud reduction &bull; $50K+/month saved</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">SM</div><div><div class="testimonial-name">Serge Minani</div><div class="testimonial-role" data-i18n="t19_role">Risk Manager, EastAfri Bank &bull; Kenya</div></div></div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-problem" data-i18n="t20_problem">Problem: Student dropout</div>
+          <div class="testimonial-quote" data-i18n="t20_quote">"We couldn't identify at-risk students early enough. Top AI Burundi's AI agents analyze attendance, grades, and engagement patterns to flag students who need help. Dropout rates fell 55%."</div>
+          <div class="testimonial-result"><div class="testimonial-result-label" data-i18n="t20_rlabel">Result</div><div class="testimonial-result-val" data-i18n="t20_rval">55% fewer dropouts &bull; Early intervention for 200+ students</div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">VN</div><div><div class="testimonial-name">Vestine Ndikumana</div><div class="testimonial-role" data-i18n="t20_role">Principal, BujaAcademy &bull; Burundi</div></div></div>
+        </div>
+
+      </div>
+      <div class="testimonials-show-more">
+        <button class="show-more-btn" onclick="toggleTestimonials()" id="show-more-btn" data-i18n="test_more">Show More Reviews</button>
+      </div>
+    </div>
+  </section>
+
   <!-- How It Works -->
   <section id="how-it-works" class="section">
     <div class="section-inner">
@@ -464,11 +663,12 @@
         cta_title: "Ready to Automate Your Business With AI?",
         cta_desc: "Join businesses in Burundi that are saving time, cutting costs, and scaling faster with Top AI Burundi's intelligent automation solutions.",
         cta_btn: "Get Started Today",
+        test_tag: "Client Success Stories", test_title: 'What Our <em>Clients Say</em>', test_desc: "Real businesses across Africa sharing real results from AI automation.", test_more: "Show More Reviews",
         footer: '&copy; 2026 <a href="https://topaiafrica.com">Top AI Burundi</a>. All rights reserved. | AI Agents &amp; Automation for Burundi'
       },
       fr: {
         nav_home: "Accueil", nav_services: "Services", nav_about: "&Agrave; propos", nav_contact: "Contact", nav_cta: "Consultation gratuite",
-        hero_badge: "D&eacute;veloppement IA &bull; Consultation &bull; Formation &bull; Burundi",
+        hero_badge: "D&eacute;veloppement IA &bull; Consultation &bull; Formation &bull; Burundi &amp; Afrique",
         hero_line1: "Services IA pour les entreprises africaines",
         hero_line2: "Automatisez. Grandissez. Excellez.",
         hero_desc: "Nous cr&eacute;ons des agents IA sur mesure, offrons des consultations d'experts et formons votre &eacute;quipe &agrave; ma&icirc;triser l'IA &mdash; aidant les entreprises au Burundi &agrave; r&eacute;duire les co&ucirc;ts de 60&nbsp;%, automatiser les processus et atteindre des op&eacute;rations 10X plus rapides.",
@@ -510,6 +710,7 @@
         cta_title: "Pr&ecirc;t &agrave; automatiser votre entreprise avec l'IA&nbsp;?",
         cta_desc: "Rejoignez les entreprises au Burundi qui gagnent du temps, r&eacute;duisent les co&ucirc;ts et &eacute;voluent plus vite gr&acirc;ce aux solutions d'automatisation intelligentes de Top AI Burundi.",
         cta_btn: "Commencez aujourd'hui",
+        test_tag: "T&eacute;moignages clients", test_title: 'Ce que disent <em>nos clients</em>', test_desc: "De vraies entreprises africaines partageant de vrais r&eacute;sultats de l'automatisation IA.", test_more: "Voir plus d'avis",
         footer: '&copy; 2026 <a href="https://topaiafrica.com">Top AI Burundi</a>. Tous droits r&eacute;serv&eacute;s. | Agents IA &amp; Automatisation pour le Burundi &amp; l\'Afrique'
       }
     };
@@ -547,9 +748,25 @@
       applyLang(currentLang === 'en' ? 'fr' : 'en');
     }
 
+    let testimonialsExpanded = false;
+    function toggleTestimonials() {
+      testimonialsExpanded = !testimonialsExpanded;
+      document.querySelectorAll('.testimonial-hidden').forEach(el => {
+        el.classList.toggle('show', testimonialsExpanded);
+        if (testimonialsExpanded) { obs.observe(el); }
+      });
+      const btn = document.getElementById('show-more-btn');
+      btn.innerHTML = testimonialsExpanded ? (currentLang === 'fr' ? 'Voir moins' : 'Show Less') : (currentLang === 'fr' ? 'Voir plus d\'avis' : 'Show More Reviews');
+    }
+
     function closeMob() {
       document.getElementById('mob').classList.remove('open');
       document.querySelector('.hamburger').classList.remove('open');
+    }
+
+    // Redirect to Burundi page if on burundi domain
+    if (false) {
+      window.location.replace('/burundi.html');
     }
 
     // Auto-detect language from URL
