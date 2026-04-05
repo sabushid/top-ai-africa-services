@@ -552,6 +552,11 @@
       document.querySelector('.hamburger').classList.remove('open');
     }
 
+    // Redirect to Burundi page if on burundi domain
+    if (window.location.hostname === 'burundi.topaiafrica.com') {
+      window.location.replace('/burundi.html');
+    }
+
     // Auto-detect language from URL
     const params = new URLSearchParams(window.location.search);
     if (params.get('lang') === 'fr') applyLang('fr');
