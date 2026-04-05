@@ -46,7 +46,9 @@
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: #050d11; backdrop-filter: blur(20px); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; max-width: 1280px; margin: 0 auto; }
     @media(min-width:768px) { .nav-inner { padding: 16px 32px; } }
-    .nav-logo { font-size: 22px; font-weight: 800; color: #fbf9f9; letter-spacing: -0.02em; }
+    .nav-logo { font-size: 22px; font-weight: 800; color: #fbf9f9; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 40px; width: auto; }
+    @media(min-width:768px) { .nav-logo img { height: 48px; } }
     .nav-logo span { color: #788bff; }
     .nav-links { display: none; align-items: center; gap: 4px; }
     @media(min-width:768px) { .nav-links { display: flex; } }
@@ -216,7 +218,7 @@
   <!-- Nav -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="https://topaiafrica.com" class="nav-logo">Top <span>AI</span> Africa<span>.</span></a>
+      <a href="https://topaiafrica.com" class="nav-logo"><img src="https://topaiafrica.com/wp-content/uploads/2026/04/Wordpress-logo-topAiAfrica-1.png" alt="Top AI Africa Logo" width="170" height="94" loading="eager" />Top <span>AI</span> Africa<span>.</span></a>
       <nav class="nav-links">
         <a href="https://topaiafrica.com/" data-i18n="nav_home">Home</a>
         <a href="#services" data-i18n="nav_services">Services</a>
