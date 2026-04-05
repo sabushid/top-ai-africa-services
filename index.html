@@ -214,6 +214,29 @@
     .testimonial-hidden { display: none; }
     .testimonial-hidden.show { display: flex; }
 
+    /* -- Use Cases -- */
+    .usecases-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media(min-width:768px) { .usecases-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(min-width:1024px) { .usecases-grid { grid-template-columns: repeat(2, 1fr); } }
+    .usecase-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(120,139,255,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: all 0.3s; }
+    .usecase-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(120,139,255,0.1); border-color: #788bff; }
+    .usecase-header { background: linear-gradient(135deg, #050d11, #0a1a2a); padding: 20px 24px; display: flex; align-items: center; gap: 14px; }
+    .usecase-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(120,139,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .usecase-header h3 { font-size: 16px; font-weight: 700; color: #fbf9f9; line-height: 1.3; }
+    .usecase-body { padding: 24px; }
+    .usecase-row { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+    .usecase-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 6px; flex-shrink: 0; min-width: 70px; text-align: center; }
+    .usecase-label-problem { background: rgba(239,68,68,0.1); color: #ef4444; }
+    .usecase-label-solution { background: rgba(120,139,255,0.1); color: #788bff; }
+    .usecase-label-result { background: rgba(34,197,94,0.1); color: #22c55e; }
+    .usecase-text { font-size: 14px; color: #423f40; line-height: 1.6; }
+    .usecase-metrics { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(120,139,255,0.08); }
+    .usecase-metric { background: rgba(120,139,255,0.06); border-radius: 8px; padding: 8px 14px; text-align: center; flex: 1; min-width: 100px; }
+    .usecase-metric-val { font-size: 18px; font-weight: 800; color: #788bff; }
+    .usecase-metric-label { font-size: 11px; color: #423f40; }
+    .usecase-hidden { display: none; }
+    .usecase-hidden.show { display: block; }
+
     .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s, transform 0.7s; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -602,6 +625,223 @@
     </div>
   </section>
 
+  <!-- Use Cases -->
+  <section id="use-cases" class="section">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-tag" data-i18n="uc_tag">Use Cases</span>
+        <h2 class="section-title" data-i18n="uc_title">20 Ways AI Agents <em>Transform African Businesses</em></h2>
+        <p class="section-desc" data-i18n="uc_desc">Real-world AI automation use cases with measurable results across industries in Burundi and Africa.</p>
+      </div>
+      <div class="usecases-grid" id="usecases-grid">
+
+        <div class="usecase-card reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128176;</div><h3>Automated Invoice Processing for Finance Teams</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Finance teams spend 25+ hours/week manually processing invoices, leading to 12% error rates and delayed payments.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents extract, validate, categorize, and file invoices automatically from emails, PDFs, and scanned documents.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Processing time cut by 90%, errors reduced to 0.3%, payments always on time.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">90%</div><div class="usecase-metric-label">Faster Processing</div></div><div class="usecase-metric"><div class="usecase-metric-val">0.3%</div><div class="usecase-metric-label">Error Rate</div></div><div class="usecase-metric"><div class="usecase-metric-val">25 hrs</div><div class="usecase-metric-label">Saved / Week</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128172;</div><h3>24/7 AI Customer Support Chatbot</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Customers wait 24-48 hours for support responses, causing 35% churn rate and negative reviews.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI chatbot agents handle 80% of customer inquiries instantly via WhatsApp, web, and SMS — escalating complex issues to humans.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Response time under 60 seconds, satisfaction up to 96%, support costs cut by 55%.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">&lt;60s</div><div class="usecase-metric-label">Response Time</div></div><div class="usecase-metric"><div class="usecase-metric-val">96%</div><div class="usecase-metric-label">Satisfaction</div></div><div class="usecase-metric"><div class="usecase-metric-val">55%</div><div class="usecase-metric-label">Cost Savings</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128200;</div><h3>AI-Powered Sales Lead Qualification</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Sales teams waste 60% of time on unqualified leads, missing high-value prospects.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents score, qualify, and prioritize leads automatically based on behavior, budget, and intent signals.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Sales team focuses only on hot leads, conversion rate triples, revenue up 40%.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">3X</div><div class="usecase-metric-label">Conversions</div></div><div class="usecase-metric"><div class="usecase-metric-val">40%</div><div class="usecase-metric-label">Revenue Growth</div></div><div class="usecase-metric"><div class="usecase-metric-val">60%</div><div class="usecase-metric-label">Time Saved</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#127793;</div><h3>Smart Agriculture &amp; Crop Monitoring</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Farmers lose 20-30% of crops due to poor weather forecasting, pest detection, and irrigation timing.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents analyze weather, soil moisture, satellite imagery, and market prices to optimize planting, irrigation, and harvest schedules.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Crop yields up 35%, water usage down 28%, crop losses reduced by 80%.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">35%</div><div class="usecase-metric-label">Higher Yields</div></div><div class="usecase-metric"><div class="usecase-metric-val">28%</div><div class="usecase-metric-label">Less Water</div></div><div class="usecase-metric"><div class="usecase-metric-val">80%</div><div class="usecase-metric-label">Less Loss</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#127979;</div><h3>AI Student Performance &amp; Dropout Prevention</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Schools can't identify at-risk students until it's too late, leading to 25% dropout rates.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents analyze attendance, grades, and engagement to flag struggling students early and trigger intervention workflows.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Dropout rates cut by 55%, early intervention for 200+ students per semester.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">55%</div><div class="usecase-metric-label">Fewer Dropouts</div></div><div class="usecase-metric"><div class="usecase-metric-val">200+</div><div class="usecase-metric-label">Students Helped</div></div><div class="usecase-metric"><div class="usecase-metric-val">3 weeks</div><div class="usecase-metric-label">Earlier Detection</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128657;</div><h3>AI-Powered Supply Chain &amp; Logistics</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Delivery delays, stockouts, and route inefficiency cost logistics companies 30%+ in wasted resources.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents optimize routes, predict demand, manage inventory levels, and auto-schedule deliveries in real-time.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Delivery times cut 40%, fuel costs down 25%, stockouts reduced 92%.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">40%</div><div class="usecase-metric-label">Faster Delivery</div></div><div class="usecase-metric"><div class="usecase-metric-val">25%</div><div class="usecase-metric-label">Fuel Savings</div></div><div class="usecase-metric"><div class="usecase-metric-val">92%</div><div class="usecase-metric-label">Less Stockouts</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128137;</div><h3>AI Patient Scheduling &amp; Appointment Management</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Double bookings, no-shows, and manual scheduling waste 15+ hours/week and frustrate patients.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents handle bookings, send smart reminders, manage cancellations, and auto-fill empty slots.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">No-shows down 67%, zero double bookings, 15 hours/week freed for patient care.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">67%</div><div class="usecase-metric-label">Fewer No-Shows</div></div><div class="usecase-metric"><div class="usecase-metric-val">0</div><div class="usecase-metric-label">Double Bookings</div></div><div class="usecase-metric"><div class="usecase-metric-val">15 hrs</div><div class="usecase-metric-label">Saved / Week</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128176;</div><h3>AI Fraud Detection for Banking &amp; Fintech</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Fraudulent transactions cost $50K+/month, manual reviews miss 40% of suspicious activity.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents analyze transaction patterns in real-time, flag anomalies instantly, and block fraud before it completes.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Fraud losses down 94%, false positives reduced 60%, real-time protection 24/7.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">94%</div><div class="usecase-metric-label">Fraud Reduced</div></div><div class="usecase-metric"><div class="usecase-metric-val">$50K+</div><div class="usecase-metric-label">Monthly Savings</div></div><div class="usecase-metric"><div class="usecase-metric-val">24/7</div><div class="usecase-metric-label">Protection</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128101;</div><h3>AI Recruitment &amp; CV Screening</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">HR teams spend weeks screening 300+ CVs per position, delaying hiring by 30-45 days.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents screen, score, and shortlist candidates based on skills, experience, and culture fit in hours.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Time-to-hire cut from 45 to 12 days, 300+ CVs screened per hour, better quality hires.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">73%</div><div class="usecase-metric-label">Faster Hiring</div></div><div class="usecase-metric"><div class="usecase-metric-val">300+</div><div class="usecase-metric-label">CVs / Hour</div></div><div class="usecase-metric"><div class="usecase-metric-val">12 days</div><div class="usecase-metric-label">Time to Hire</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128200;</div><h3>AI Financial Reporting &amp; Analytics</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Monthly financial reports take 3 days to compile manually with frequent errors and outdated data.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents pull data from all systems, generate reports with insights, forecasts, and anomaly alerts automatically.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Reports generated in 15 minutes with 100% accuracy and real-time insights.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">15 min</div><div class="usecase-metric-label">vs. 3 Days</div></div><div class="usecase-metric"><div class="usecase-metric-val">100%</div><div class="usecase-metric-label">Accuracy</div></div><div class="usecase-metric"><div class="usecase-metric-val">Real-time</div><div class="usecase-metric-label">Insights</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#127968;</div><h3>AI Real Estate Lead Automation</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Real estate agents lose 40% of leads because follow-ups take too long, competitors respond faster.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents respond to inquiries in 60 seconds, schedule viewings, send property matches, and follow up automatically.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Zero leads lost, 3X more viewings booked, conversion rate doubled.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">0</div><div class="usecase-metric-label">Leads Lost</div></div><div class="usecase-metric"><div class="usecase-metric-val">3X</div><div class="usecase-metric-label">More Viewings</div></div><div class="usecase-metric"><div class="usecase-metric-val">2X</div><div class="usecase-metric-label">Conversions</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#9889;</div><h3>AI Energy Management for Hotels &amp; Buildings</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Hotels and commercial buildings waste 30-40% of energy costs due to inefficient HVAC and lighting schedules.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents monitor occupancy, weather, and usage patterns to optimize energy consumption in real-time.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Energy costs cut 42%, $8,000+ saved per quarter, carbon footprint reduced.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">42%</div><div class="usecase-metric-label">Energy Savings</div></div><div class="usecase-metric"><div class="usecase-metric-val">$8K+</div><div class="usecase-metric-label">Saved / Quarter</div></div><div class="usecase-metric"><div class="usecase-metric-val">24/7</div><div class="usecase-metric-label">Monitoring</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128230;</div><h3>AI Inventory &amp; Warehouse Management</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Manual inventory tracking across multiple warehouses leads to stockouts, overstocking, and $20K+/month in losses.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents track stock in real-time, predict demand, auto-reorder, and optimize warehouse layouts.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">98% inventory accuracy, stockouts reduced 92%, carrying costs down 35%.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">98%</div><div class="usecase-metric-label">Accuracy</div></div><div class="usecase-metric"><div class="usecase-metric-val">92%</div><div class="usecase-metric-label">Less Stockouts</div></div><div class="usecase-metric"><div class="usecase-metric-val">35%</div><div class="usecase-metric-label">Cost Reduction</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128220;</div><h3>AI Contract &amp; Document Review</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Legal teams spend 10+ hours reviewing each contract, missing critical clauses and compliance risks.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents scan contracts, highlight risks, flag non-standard clauses, and compare against templates instantly.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Review time cut 85%, zero missed clauses, 100% compliance rate.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">85%</div><div class="usecase-metric-label">Faster Review</div></div><div class="usecase-metric"><div class="usecase-metric-val">100%</div><div class="usecase-metric-label">Compliance</div></div><div class="usecase-metric"><div class="usecase-metric-val">0</div><div class="usecase-metric-label">Missed Clauses</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128241;</div><h3>AI Social Media Management &amp; Content</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Managing social media for multiple accounts takes 20+ hours/week and engagement is inconsistent.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents schedule posts, generate content ideas, track engagement, respond to comments, and produce analytics reports.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">15 accounts managed by 1 person, engagement up 60%, 20 hours/week freed.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">15</div><div class="usecase-metric-label">Accounts / Person</div></div><div class="usecase-metric"><div class="usecase-metric-val">60%</div><div class="usecase-metric-label">More Engagement</div></div><div class="usecase-metric"><div class="usecase-metric-val">20 hrs</div><div class="usecase-metric-label">Saved / Week</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128736;</div><h3>AI Quality Control for Manufacturing</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Manual quality inspections miss 15-20% of defects, leading to costly returns and damaged reputation.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents monitor production lines in real-time, detect defects with computer vision, and halt faulty batches instantly.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Defect detection up to 99.5%, returns reduced 78%, real-time monitoring.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">99.5%</div><div class="usecase-metric-label">Detection Rate</div></div><div class="usecase-metric"><div class="usecase-metric-val">78%</div><div class="usecase-metric-label">Fewer Returns</div></div><div class="usecase-metric"><div class="usecase-metric-val">Real-time</div><div class="usecase-metric-label">Monitoring</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128218;</div><h3>AI-Powered Employee Training &amp; Onboarding</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">New employee onboarding takes 4-6 weeks, HR spends 40+ hours per hire on training logistics.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents deliver personalized training paths, answer employee questions, track progress, and auto-schedule sessions.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Onboarding time cut to 2 weeks, HR time saved 75%, new hire satisfaction up 45%.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">50%</div><div class="usecase-metric-label">Faster Onboarding</div></div><div class="usecase-metric"><div class="usecase-metric-val">75%</div><div class="usecase-metric-label">HR Time Saved</div></div><div class="usecase-metric"><div class="usecase-metric-val">45%</div><div class="usecase-metric-label">Better Satisfaction</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128178;</div><h3>AI Debt Collection &amp; Payment Recovery</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Outstanding receivables exceed 90+ days, manual follow-ups recover only 45% of overdue payments.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents send personalized payment reminders, negotiate payment plans, and escalate strategically based on debtor behavior.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Recovery rate up to 82%, average collection time down from 90 to 28 days.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">82%</div><div class="usecase-metric-label">Recovery Rate</div></div><div class="usecase-metric"><div class="usecase-metric-val">28 days</div><div class="usecase-metric-label">vs. 90 Days</div></div><div class="usecase-metric"><div class="usecase-metric-val">37%</div><div class="usecase-metric-label">More Recovered</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128640;</div><h3>AI Business Scaling &amp; Client Onboarding</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Can't scale beyond 200 clients because onboarding, billing, and support are all manual processes.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents automate client onboarding, billing cycles, support tickets, and account management end-to-end.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">Scaled from 200 to 800+ clients with the same team, 4X growth without new hires.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">4X</div><div class="usecase-metric-label">Client Growth</div></div><div class="usecase-metric"><div class="usecase-metric-val">800+</div><div class="usecase-metric-label">Clients Served</div></div><div class="usecase-metric"><div class="usecase-metric-val">0</div><div class="usecase-metric-label">New Hires Needed</div></div></div>
+          </div>
+        </div>
+
+        <div class="usecase-card usecase-hidden reveal">
+          <div class="usecase-header"><div class="usecase-icon">&#128202;</div><h3>AI Regulatory Compliance Monitoring</h3></div>
+          <div class="usecase-body">
+            <div class="usecase-row"><span class="usecase-label usecase-label-problem">Problem</span><span class="usecase-text">Tracking regulatory changes across multiple countries manually risks fines, penalties, and license revocation.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-solution">Solution</span><span class="usecase-text">AI agents monitor regulatory databases, flag relevant changes, auto-update compliance checklists, and alert legal teams.</span></div>
+            <div class="usecase-row"><span class="usecase-label usecase-label-result">Result</span><span class="usecase-text">100% compliance rate, zero missed deadlines, monitoring across 3+ countries.</span></div>
+            <div class="usecase-metrics"><div class="usecase-metric"><div class="usecase-metric-val">100%</div><div class="usecase-metric-label">Compliance</div></div><div class="usecase-metric"><div class="usecase-metric-val">0</div><div class="usecase-metric-label">Missed Deadlines</div></div><div class="usecase-metric"><div class="usecase-metric-val">3+</div><div class="usecase-metric-label">Countries Tracked</div></div></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testimonials-show-more">
+        <button class="show-more-btn" onclick="toggleUseCases()" id="show-more-uc-btn" data-i18n="uc_more">Show More Use Cases</button>
+      </div>
+    </div>
+  </section>
+
   <!-- Final CTA -->
   <section class="final-cta">
     <div class="final-cta-inner">
@@ -664,6 +904,7 @@
         cta_desc: "Join businesses across Burundi and Africa that are saving time, cutting costs, and scaling faster with Top AI Africa's intelligent automation solutions.",
         cta_btn: "Get Started Today",
         test_tag: "Client Success Stories", test_title: 'What Our <em>Clients Say</em>', test_desc: "Real businesses across Africa sharing real results from AI automation.", test_more: "Show More Reviews",
+        uc_tag: "Use Cases", uc_title: '20 Ways AI Agents <em>Transform African Businesses</em>', uc_desc: "Real-world AI automation use cases with measurable results across industries in Burundi and Africa.", uc_more: "Show More Use Cases",
         footer: '&copy; 2026 <a href="https://topaiafrica.com">Top AI Africa</a>. All rights reserved. | AI Agents &amp; Automation for Burundi &amp; Africa'
       },
       fr: {
@@ -711,6 +952,7 @@
         cta_desc: "Rejoignez les entreprises au Burundi et en Afrique qui gagnent du temps, r&eacute;duisent les co&ucirc;ts et &eacute;voluent plus vite gr&acirc;ce aux solutions d'automatisation intelligentes de Top AI Africa.",
         cta_btn: "Commencez aujourd'hui",
         test_tag: "T&eacute;moignages clients", test_title: 'Ce que disent <em>nos clients</em>', test_desc: "De vraies entreprises africaines partageant de vrais r&eacute;sultats de l'automatisation IA.", test_more: "Voir plus d'avis",
+        uc_tag: "Cas d'usage", uc_title: "20 fa&ccedil;ons dont l'IA <em>transforme les entreprises africaines</em>", uc_desc: "Cas d'usage r&eacute;els d'automatisation IA avec des r&eacute;sultats mesurables dans les industries au Burundi et en Afrique.", uc_more: "Voir plus de cas d'usage",
         footer: '&copy; 2026 <a href="https://topaiafrica.com">Top AI Africa</a>. Tous droits r&eacute;serv&eacute;s. | Agents IA &amp; Automatisation pour le Burundi &amp; l\'Afrique'
       }
     };
@@ -746,6 +988,17 @@
 
     function toggleLang() {
       applyLang(currentLang === 'en' ? 'fr' : 'en');
+    }
+
+    let useCasesExpanded = false;
+    function toggleUseCases() {
+      useCasesExpanded = !useCasesExpanded;
+      document.querySelectorAll('.usecase-hidden').forEach(el => {
+        el.classList.toggle('show', useCasesExpanded);
+        if (useCasesExpanded) { obs.observe(el); }
+      });
+      const btn = document.getElementById('show-more-uc-btn');
+      btn.innerHTML = useCasesExpanded ? (currentLang === 'fr' ? 'Voir moins' : 'Show Less') : (currentLang === 'fr' ? "Voir plus de cas d'usage" : 'Show More Use Cases');
     }
 
     let testimonialsExpanded = false;
