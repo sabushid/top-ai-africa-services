@@ -1017,9 +1017,12 @@
       document.querySelector('.hamburger').classList.remove('open');
     }
 
-    // Redirect to Burundi page if on burundi domain
+    // Redirect based on hostname
     if (window.location.hostname === 'burundi.topaiafrica.com') {
       window.location.replace('/burundi.html');
+    }
+    if (window.location.hostname === 'portfolio.topaiafrica.com' && window.location.pathname === '/') {
+      window.location.replace('/portfolio-montreal.html');
     }
 
     // Auto-detect language from URL
